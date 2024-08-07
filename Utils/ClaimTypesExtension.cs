@@ -8,14 +8,18 @@ namespace RpgApi.Utils
 {
     public static class ClaimTypesExtension //metodos para adaptar as extensao
     {
-        public static int userId(this ClaimsPrincipal user)
+        public static int ObterUsuarioId(this ClaimsPrincipal user)
         {
             var id = user.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
 
-            return int.Parse(id);       
+            return int.Parse(id); 
+
+            
+
+
         }
 
-    
+
 
 
 
